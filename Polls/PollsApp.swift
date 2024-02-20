@@ -11,11 +11,7 @@ import SwiftUI
 struct PollsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+            HomeView()
         }
     }
 }
