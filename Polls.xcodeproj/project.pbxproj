@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20020A1E2B84274F00118583 /* PollsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A1D2B84274F00118583 /* PollsTabView.swift */; };
+		20020A232B8427D000118583 /* JoinScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A222B8427D000118583 /* JoinScreen.swift */; };
+		20020A252B84286E00118583 /* CreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A242B84286E00118583 /* CreateScreen.swift */; };
+		20020A272B84292700118583 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A262B84292700118583 /* HomeScreen.swift */; };
+		20020A292B842C6900118583 /* CreateScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A282B842C6900118583 /* CreateScreenViewModel.swift */; };
 		20A336262B815C21003E1732 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 20A336252B815C21003E1732 /* RealityKitContent */; };
 		20A336282B815C21003E1732 /* PollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A336272B815C21003E1732 /* PollsApp.swift */; };
 		20A3362E2B815C23003E1732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A3362D2B815C23003E1732 /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20020A1D2B84274F00118583 /* PollsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsTabView.swift; sourceTree = "<group>"; };
+		20020A222B8427D000118583 /* JoinScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreen.swift; sourceTree = "<group>"; };
+		20020A242B84286E00118583 /* CreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreen.swift; sourceTree = "<group>"; };
+		20020A262B84292700118583 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		20020A282B842C6900118583 /* CreateScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenViewModel.swift; sourceTree = "<group>"; };
 		20A336202B815C21003E1732 /* Polls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A336242B815C21003E1732 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		20A336272B815C21003E1732 /* PollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsApp.swift; sourceTree = "<group>"; };
@@ -42,6 +52,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20020A1F2B84278800118583 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				20020A262B84292700118583 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		20020A202B8427A100118583 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				20020A242B84286E00118583 /* CreateScreen.swift */,
+				20020A282B842C6900118583 /* CreateScreenViewModel.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		20020A212B8427B900118583 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				20020A222B8427D000118583 /* JoinScreen.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
 		20A336172B815C21003E1732 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +97,7 @@
 		20A336222B815C21003E1732 /* Polls */ = {
 			isa = PBXGroup;
 			children = (
+				20A336402B828531003E1732 /* Screens */,
 				20A3363D2B824142003E1732 /* Views */,
 				20A336382B816238003E1732 /* RealityViews */,
 				20A336272B815C21003E1732 /* PollsApp.swift */,
@@ -100,7 +136,6 @@
 		20A3363D2B824142003E1732 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				20A336402B828531003E1732 /* Screens */,
 				20A3363E2B82416C003E1732 /* BarRow.swift */,
 			);
 			path = Views;
@@ -109,7 +144,11 @@
 		20A336402B828531003E1732 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				20020A1F2B84278800118583 /* Home */,
+				20020A202B8427A100118583 /* Create */,
+				20020A212B8427B900118583 /* Join */,
 				20A336412B82857A003E1732 /* HomeView.swift */,
+				20020A1D2B84274F00118583 /* PollsTabView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -188,10 +227,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A3363A2B816260003E1732 /* Bar.swift in Sources */,
+				20020A252B84286E00118583 /* CreateScreen.swift in Sources */,
+				20020A232B8427D000118583 /* JoinScreen.swift in Sources */,
 				20A3363F2B82416C003E1732 /* BarRow.swift in Sources */,
 				20A3363C2B8238EE003E1732 /* BubbleNumber.swift in Sources */,
 				20A336422B82857A003E1732 /* HomeView.swift in Sources */,
+				20020A292B842C6900118583 /* CreateScreenViewModel.swift in Sources */,
 				20A336282B815C21003E1732 /* PollsApp.swift in Sources */,
+				20020A272B84292700118583 /* HomeScreen.swift in Sources */,
+				20020A1E2B84274F00118583 /* PollsTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +373,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Polls;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +401,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Polls;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
