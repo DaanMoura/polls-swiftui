@@ -12,6 +12,8 @@
 		20020A252B84286E00118583 /* CreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A242B84286E00118583 /* CreateScreen.swift */; };
 		20020A272B84292700118583 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A262B84292700118583 /* HomeScreen.swift */; };
 		20020A292B842C6900118583 /* CreateScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A282B842C6900118583 /* CreateScreenViewModel.swift */; };
+		20020A2C2B84474300118583 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A2B2B84474300118583 /* Poll.swift */; };
+		20020A2E2B8447C300118583 /* PollOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A2D2B8447C300118583 /* PollOption.swift */; };
 		20A336262B815C21003E1732 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 20A336252B815C21003E1732 /* RealityKitContent */; };
 		20A336282B815C21003E1732 /* PollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A336272B815C21003E1732 /* PollsApp.swift */; };
 		20A3362E2B815C23003E1732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A3362D2B815C23003E1732 /* Assets.xcassets */; };
@@ -19,7 +21,6 @@
 		20A3363A2B816260003E1732 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A336392B816260003E1732 /* Bar.swift */; };
 		20A3363C2B8238EE003E1732 /* BubbleNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3363B2B8238EE003E1732 /* BubbleNumber.swift */; };
 		20A3363F2B82416C003E1732 /* BarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3363E2B82416C003E1732 /* BarRow.swift */; };
-		20A336422B82857A003E1732 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A336412B82857A003E1732 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		20020A242B84286E00118583 /* CreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreen.swift; sourceTree = "<group>"; };
 		20020A262B84292700118583 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		20020A282B842C6900118583 /* CreateScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenViewModel.swift; sourceTree = "<group>"; };
+		20020A2B2B84474300118583 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		20020A2D2B8447C300118583 /* PollOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollOption.swift; sourceTree = "<group>"; };
 		20A336202B815C21003E1732 /* Polls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A336242B815C21003E1732 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		20A336272B815C21003E1732 /* PollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsApp.swift; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		20A336392B816260003E1732 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		20A3363B2B8238EE003E1732 /* BubbleNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNumber.swift; sourceTree = "<group>"; };
 		20A3363E2B82416C003E1732 /* BarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarRow.swift; sourceTree = "<group>"; };
-		20A336412B82857A003E1732 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,15 @@
 			path = Join;
 			sourceTree = "<group>";
 		};
+		20020A2A2B84473700118583 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20020A2B2B84474300118583 /* Poll.swift */,
+				20020A2D2B8447C300118583 /* PollOption.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		20A336172B815C21003E1732 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +108,7 @@
 		20A336222B815C21003E1732 /* Polls */ = {
 			isa = PBXGroup;
 			children = (
+				20020A2A2B84473700118583 /* Models */,
 				20A336402B828531003E1732 /* Screens */,
 				20A3363D2B824142003E1732 /* Views */,
 				20A336382B816238003E1732 /* RealityViews */,
@@ -147,7 +159,6 @@
 				20020A1F2B84278800118583 /* Home */,
 				20020A202B8427A100118583 /* Create */,
 				20020A212B8427B900118583 /* Join */,
-				20A336412B82857A003E1732 /* HomeView.swift */,
 				20020A1D2B84274F00118583 /* PollsTabView.swift */,
 			);
 			path = Screens;
@@ -229,9 +240,10 @@
 				20A3363A2B816260003E1732 /* Bar.swift in Sources */,
 				20020A252B84286E00118583 /* CreateScreen.swift in Sources */,
 				20020A232B8427D000118583 /* JoinScreen.swift in Sources */,
+				20020A2E2B8447C300118583 /* PollOption.swift in Sources */,
+				20020A2C2B84474300118583 /* Poll.swift in Sources */,
 				20A3363F2B82416C003E1732 /* BarRow.swift in Sources */,
 				20A3363C2B8238EE003E1732 /* BubbleNumber.swift in Sources */,
-				20A336422B82857A003E1732 /* HomeView.swift in Sources */,
 				20020A292B842C6900118583 /* CreateScreenViewModel.swift in Sources */,
 				20A336282B815C21003E1732 /* PollsApp.swift in Sources */,
 				20020A272B84292700118583 /* HomeScreen.swift in Sources */,
