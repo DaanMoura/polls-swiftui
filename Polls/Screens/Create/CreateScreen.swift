@@ -30,7 +30,9 @@ struct CreateScreen: View {
                 }
                 
                 Button("Create") {
-                    viewModel.createPoll()
+                    Task {
+                        await viewModel.createPoll()
+                    }
                 }
                 .tint(.accent)
                 .disabled(!viewModel.isValid)
@@ -38,8 +40,25 @@ struct CreateScreen: View {
                 .navigationTitle("Create")
         }
         .sheet(isPresented: $viewModel.showSheet) {
-            Text("Poll created")
-            Button("Ok") { viewModel.dismissSheet() }
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                VStack(alignment: .center) {
+                    Text("Poll code:")
+                    Text(viewModel.pollCode)
+                        .font(.largeTitle)
+                        .padding()
+                    
+                    Button("Copy to clipboard", systemImage: "doc.on.doc") {
+                        UIPasteboard.general.string = viewModel.pollCode
+                    }
+                    
+                    Button("Close") {
+                        viewModel.dismissSheet()
+                    }
+                }
+                .padding()
+            }
         }
     }
 }

@@ -13,6 +13,8 @@ final class CreateScreenViewModel: ObservableObject {
     @Published var options: [String] = ["", ""]
     
     @Published var showSheet = false
+    @Published var isLoading = false
+    @Published var pollCode = ""
     
     var isValid: Bool {
         guard !title.isEmpty else { return false }
@@ -32,9 +34,18 @@ final class CreateScreenViewModel: ObservableObject {
         options.remove(atOffsets: offsets)
     }
     
-    func createPoll() {
+    func createPoll() async {
         showSheet = true
-        print("create")
+        isLoading = true
+        
+        do {
+            pollCode = try await NetworkManager.shared.createPoll(title: title, options: options)
+            isLoading = false
+        } catch {
+            isLoading = false
+            // TODO: Show error alert
+            print(error)
+        }
     }
     
     func dismissSheet() {
