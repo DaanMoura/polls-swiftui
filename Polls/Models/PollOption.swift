@@ -12,3 +12,7 @@ struct PollOption: Decodable, Identifiable {
     let title: String
     let score: Int
 }
+
+struct VotePollOptionBody: Encodable {
+    let pollOptionId: String
+}
