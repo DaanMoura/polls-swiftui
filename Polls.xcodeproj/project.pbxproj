@@ -16,6 +16,8 @@
 		20020A2E2B8447C300118583 /* PollOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20020A2D2B8447C300118583 /* PollOption.swift */; };
 		201C08262B8574C700DDF82F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C08252B8574C700DDF82F /* NetworkManager.swift */; };
 		201C08282B85760700DDF82F /* PollError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C08272B85760700DDF82F /* PollError.swift */; };
+		20212F822B861E6B0084DD55 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20212F812B861E6B0084DD55 /* AppState.swift */; };
+		2054CD8A2B86CABB008CC306 /* JoinScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054CD892B86CABB008CC306 /* JoinScreenViewModel.swift */; };
 		20A336262B815C21003E1732 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 20A336252B815C21003E1732 /* RealityKitContent */; };
 		20A336282B815C21003E1732 /* PollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A336272B815C21003E1732 /* PollsApp.swift */; };
 		20A3362E2B815C23003E1732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A3362D2B815C23003E1732 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		20020A2D2B8447C300118583 /* PollOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollOption.swift; sourceTree = "<group>"; };
 		201C08252B8574C700DDF82F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		201C08272B85760700DDF82F /* PollError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollError.swift; sourceTree = "<group>"; };
+		20212F812B861E6B0084DD55 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2054CD892B86CABB008CC306 /* JoinScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenViewModel.swift; sourceTree = "<group>"; };
 		20A336202B815C21003E1732 /* Polls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A336242B815C21003E1732 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		20A336272B815C21003E1732 /* PollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsApp.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				20020A222B8427D000118583 /* JoinScreen.swift */,
+				2054CD892B86CABB008CC306 /* JoinScreenViewModel.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				20A3363D2B824142003E1732 /* Views */,
 				20A336382B816238003E1732 /* RealityViews */,
 				20A336272B815C21003E1732 /* PollsApp.swift */,
+				20212F812B861E6B0084DD55 /* AppState.swift */,
 				20A3362D2B815C23003E1732 /* Assets.xcassets */,
 				20A336322B815C23003E1732 /* Info.plist */,
 				20A3362F2B815C23003E1732 /* Preview Content */,
@@ -251,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2054CD8A2B86CABB008CC306 /* JoinScreenViewModel.swift in Sources */,
 				201C08262B8574C700DDF82F /* NetworkManager.swift in Sources */,
 				20A3363A2B816260003E1732 /* Bar.swift in Sources */,
 				20020A252B84286E00118583 /* CreateScreen.swift in Sources */,
@@ -260,6 +267,7 @@
 				20A3363F2B82416C003E1732 /* BarRow.swift in Sources */,
 				20A3363C2B8238EE003E1732 /* BubbleNumber.swift in Sources */,
 				20020A292B842C6900118583 /* CreateScreenViewModel.swift in Sources */,
+				20212F822B861E6B0084DD55 /* AppState.swift in Sources */,
 				20A336282B815C21003E1732 /* PollsApp.swift in Sources */,
 				201C08282B85760700DDF82F /* PollError.swift in Sources */,
 				20020A272B84292700118583 /* HomeScreen.swift in Sources */,

@@ -13,6 +13,11 @@ struct Poll: Decodable, Identifiable {
     let options: [PollOption]
 }
 
+struct PollSaved: Codable, Identifiable {
+    let id: String
+    let title: String
+}
+
 struct PollPostBody: Encodable {
     let title: String
     let options: [String]

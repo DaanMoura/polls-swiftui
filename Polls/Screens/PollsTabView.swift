@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PollsTabView: View {
+    @StateObject var appState = AppStateModel()
     
     var body: some View {
         TabView {
@@ -20,6 +21,7 @@ struct PollsTabView: View {
             JoinScreen()
                 .tabItem { Label("Join", systemImage: "hand.point.up.left.and.text") }
         }
+        .environmentObject(appState)
     }
 }
 

@@ -34,13 +34,15 @@ final class CreateScreenViewModel: ObservableObject {
         options.remove(atOffsets: offsets)
     }
     
-    func createPoll() async {
+    @MainActor func createPoll(completion: (PollSaved) -> ()) async {
         showSheet = true
         isLoading = true
         
         do {
             pollCode = try await NetworkManager.shared.createPoll(title: title, options: options)
             isLoading = false
+            let pollToSave = PollSaved(id: pollCode, title: title)
+            completion(pollToSave)
         } catch {
             isLoading = false
             // TODO: Show error alert

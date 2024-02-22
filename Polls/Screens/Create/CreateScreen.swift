@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateScreen: View {
-    
+    @EnvironmentObject var appState: AppStateModel
     @StateObject var viewModel = CreateScreenViewModel()
     
     var body: some View {
@@ -31,7 +31,9 @@ struct CreateScreen: View {
                 
                 Button("Create") {
                     Task {
-                        await viewModel.createPoll()
+                        await viewModel.createPoll() { poll in
+                            appState.pushCreatedPoll(poll)
+                        }
                     }
                 }
                 .tint(.accent)
