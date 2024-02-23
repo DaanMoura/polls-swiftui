@@ -13,6 +13,8 @@ final class AppStateModel: ObservableObject {
     @Published var createdPolls: [PollSaved] = []
     @Published var joinedPolls: [PollSaved] = []
     
+    @Published var selectedPoll: PollSaved?
+    
     init() {
         retrieveAppState()
     }
@@ -58,6 +60,10 @@ final class AppStateModel: ObservableObject {
     func removeJoinedPollAt (at offsets: IndexSet) {
         joinedPolls.remove(atOffsets: offsets)
         saveState()
+    }
+    
+    func selectPoll(_ poll: PollSaved) {
+        selectedPoll = poll
     }
 }
 

@@ -12,7 +12,7 @@ struct HomeScreen: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            VStack {
                 if (appState.createdPolls.isEmpty && appState.joinedPolls.isEmpty) {
                     VStack {
                         Text("You don't have created or joined any polls yet!")
@@ -25,24 +25,26 @@ struct HomeScreen: View {
                             Text("Join a poll")
                         }
                     }
-                    .padding(.top, 72)
                 } else {
                     if !appState.createdPolls.isEmpty {
-                        Section(header: Text("Created polls")) {
-                            ForEach(appState.createdPolls) { poll in
-                                Text(poll.title)
-                            }
+                        PollListView(title: "Created polls", polls: appState.createdPolls) { poll in
+                            appState.selectedPoll = poll
+                        } onDelete: { indexSet in
+                            appState.removeCreatedPollAt(at: indexSet)
                         }
                     }
                     if !appState.joinedPolls.isEmpty {
-                        Section(header: Text("Joined polls")) {
-                            ForEach(appState.joinedPolls) { poll in
-                                Text(poll.title)
-                            }
+                        PollListView(title: "Joined polls", polls: appState.joinedPolls) { poll in
+                            appState.selectedPoll = poll
+                        } onDelete: { indexSet in
+                            appState.removeJoinedPollAt(at: indexSet)
                         }
                     }
                 }
             }
+            .navigationDestination(item: $appState.selectedPoll, destination: { poll in
+                PollView(selectedPoll: poll)
+            })
             .navigationTitle("Polls")
         }
     }

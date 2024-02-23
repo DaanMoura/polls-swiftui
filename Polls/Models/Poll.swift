@@ -13,7 +13,7 @@ struct Poll: Decodable, Identifiable {
     let options: [PollOption]
 }
 
-struct PollSaved: Codable, Identifiable {
+struct PollSaved: Codable, Identifiable, Hashable {
     let id: String
     let title: String
 }
