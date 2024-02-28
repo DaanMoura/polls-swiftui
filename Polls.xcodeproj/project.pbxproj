@@ -17,6 +17,7 @@
 		201C08262B8574C700DDF82F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C08252B8574C700DDF82F /* NetworkManager.swift */; };
 		201C08282B85760700DDF82F /* PollError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201C08272B85760700DDF82F /* PollError.swift */; };
 		20212F822B861E6B0084DD55 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20212F812B861E6B0084DD55 /* AppState.swift */; };
+		2036B2282B8EB56E00ABC442 /* PollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036B2272B8EB56E00ABC442 /* PollViewModel.swift */; };
 		20389C362B88266C0018662C /* PollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20389C352B88266C0018662C /* PollView.swift */; };
 		20389C382B88277C0018662C /* PollListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20389C372B88277C0018662C /* PollListView.swift */; };
 		2054CD8A2B86CABB008CC306 /* JoinScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054CD892B86CABB008CC306 /* JoinScreenViewModel.swift */; };
@@ -40,6 +41,7 @@
 		201C08252B8574C700DDF82F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		201C08272B85760700DDF82F /* PollError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollError.swift; sourceTree = "<group>"; };
 		20212F812B861E6B0084DD55 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2036B2272B8EB56E00ABC442 /* PollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollViewModel.swift; sourceTree = "<group>"; };
 		20389C352B88266C0018662C /* PollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollView.swift; sourceTree = "<group>"; };
 		20389C372B88277C0018662C /* PollListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListView.swift; sourceTree = "<group>"; };
 		2054CD892B86CABB008CC306 /* JoinScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinScreenViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				20389C352B88266C0018662C /* PollView.swift */,
+				2036B2272B8EB56E00ABC442 /* PollViewModel.swift */,
 			);
 			path = Poll;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				201C08282B85760700DDF82F /* PollError.swift in Sources */,
 				20020A272B84292700118583 /* HomeScreen.swift in Sources */,
 				20020A1E2B84274F00118583 /* PollsTabView.swift in Sources */,
+				2036B2282B8EB56E00ABC442 /* PollViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

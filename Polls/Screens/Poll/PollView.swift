@@ -8,15 +8,50 @@
 import SwiftUI
 
 struct PollView: View {
-    let selectedPoll: PollSaved
+    
+    @StateObject var viewModel = PollViewModel()
+    
+    @Binding var selectedPoll: PollSaved
+    
     var body: some View {
         NavigationStack {
-            Text(selectedPoll.title)
-                .navigationTitle(selectedPoll.title)
+            VStack {
+                if (viewModel.isLoading) {
+                    ProgressView()
+                } else if (viewModel.poll == nil) {
+                    Text("Poll not found!")
+                } else if (selectedPoll.voteOption != nil) {
+                    Text("Thank you for voting!")
+                    Text(selectedPoll.voteOption ?? "")
+                } else {
+                    Form {
+                        Section(header: Text(selectedPoll.title)) {
+                            Picker(selection: $viewModel.voteOption, label: EmptyView()) {
+                                ForEach(viewModel.poll!.options) { option in
+                                    Text(option.title)
+                                }
+                            }
+                            .pickerStyle(.inline)
+                        }
+                        Button("Vote") {
+                            Task {
+                                await viewModel.vote() { pollOptionId in
+                                    selectedPoll.voteOption = pollOptionId
+                                }
+                            }
+                        }
+                        .disabled(viewModel.isVoteDisabled)
+                    }
+                }
+            }
+            .navigationTitle(selectedPoll.title)
+        }
+        .task {
+            await viewModel.getPoll(pollId: selectedPoll.id)
         }
     }
 }
 
-//#Preview {
-//    PollView()
-//}
+#Preview {
+    PollView(selectedPoll: Binding.constant(PollSaved(id: "1", title: "Test", voteOption: nil)))
+}

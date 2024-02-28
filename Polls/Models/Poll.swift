@@ -16,6 +16,7 @@ struct Poll: Decodable, Identifiable {
 struct PollSaved: Codable, Identifiable, Hashable {
     let id: String
     let title: String
+    var voteOption: String? = nil
 }
 
 struct PollPostBody: Encodable {
